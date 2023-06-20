@@ -23,12 +23,12 @@ router.route('/login')
 
 router.route('/create-task')
   .get(siteController.create_task)
-  .post(siteController.create_task);
+  // .post(siteController.create_task);
 
 router.route('/auth/google')
   .get(siteController.google_get);
 
-router.route('/auth/google/admin')
+router.route('/auth/google/account')
   .get(siteController.google_redirect_get);
 
 

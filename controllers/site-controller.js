@@ -32,7 +32,8 @@ module.exports = {
     request.login(user, (err) => {
       if (err) {
         response.redirect('/login') 
-        return err
+        // return err
+        //disabling for test
       } else {
         passport.authenticate('local')(request, response, () => {
           response.redirect('/account');
@@ -79,6 +80,8 @@ module.exports = {
           task: task
       })
       newTask.save()
+      response.redirect('/account')
+      // keep
       //response.redirect('/')
   },
     //About
